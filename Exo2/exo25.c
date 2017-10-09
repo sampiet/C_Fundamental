@@ -35,24 +35,12 @@ int main(int argc, char *argv[] )
 
 
 	}
-
-	// check if the number is perfect number 
-       
- 
 	if(sum_div==2*numb)
 	{
-
 		printf("The number is a perfect") ;
-    }
-
-    else
-
-    	printf("The number is not a perfect number") ;
-
-
-
-
-
+        }
+        else 
+    	        printf("The number is not a perfect number") ;
 
 }
 
@@ -76,12 +64,8 @@ int  numb_div(int  numb)
 		{
 			cpt++ ;
 		}
-			
-
-			
-
-       }
-       return cpt ;
+	}
+	return cpt ;
 
 
 }
