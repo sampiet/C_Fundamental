@@ -9,7 +9,7 @@
 int main(int argc, char *argv[] )
 
 {
-	char *oprd_l =argv[1];
+    char *oprd_l =argv[1];
     int length = strlen(oprd_l) ; 
     int cpt_num=0;; 
     int cpt_spec=0;
