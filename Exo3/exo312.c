@@ -5,10 +5,6 @@
 #include <math.h>
 #include <ctype.h>
 
-
-// number_char compute the  amount of  char inside of the strings
-int number_char(char *oprd_l) ;
-
 int main(int argc, char *argv[] )
 {  
     char *oprd_l =argv[1];
