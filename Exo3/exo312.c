@@ -10,8 +10,8 @@
 int number_char(char *oprd_l) ;
 
 int main(int argc, char *argv[] )
-{
-	char *oprd_l =argv[1];
+{  
+    char *oprd_l =argv[1];
     int length = strlen(oprd_l) ;
     int offset ;
     if( (oprd_l[0]==0 && oprd_l[1]=='x') ||(oprd_l[0]==0 && oprd_l[1]=='X'))
@@ -22,7 +22,6 @@ int main(int argc, char *argv[] )
         {
         	offset = 0 ;
         }
-    	
     int numb =0 ; 
     int expnt= length-offset -1;
     for(int i= 0; i< (length-offset) ;i++)
