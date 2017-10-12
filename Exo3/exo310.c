@@ -4,47 +4,33 @@
 #include <stdbool.h>
 #include <math.h>
 #include <ctype.h>
-
-
-// number_char compute the  amount of  char inside of the strings
-int number_char(char *oprd_l) ;
-
 int main(int argc, char *argv[] )
 { 
     char *oprd_l =argv[1];
-    char a[]= " " ;
-    int lgth = (int) strlen(oprd_l ) ;
-    int cpt=1000 ;
-    char *token=strtok(argv[1], a) ; 
-    char *ptr;
-    ptr=(char *)malloc(cpt*sizeof(char)) ;
-    while(token!=NULL)
-    {
-        strcat(ptr, token) ;
-        token=strtok(NULL, a) ;
+    int length= (int)strlen(oprd_l) ;
+    
+    for(int i=0 ; i< length;i++)
+    {   
+        if((char)oprd_l[0]==' ')
+        oprd_l++ ;
     }
-    printf("The  length of the stringg before cat %d\n",lgth ) ; 
-    printf("The  length of the stringg after cat %d\n",(int)strlen(ptr)) ; 
-    printf("Final string %s\n", ptr) ; 
+    int length2=(int)strlen(oprd_l) -1 ;
+    oprd_l+=length2 ;
+    int cpt=0 ;
+     while ((char)oprd_l[0]==' ') 
+     { 
+        cpt ++ ;
+        oprd_l-- ;
+     }
+        
+    int ofset =length2 +1 -cpt ; 
+    oprd_l-= ofset ;
+    char ptr[(length2-cpt )];
+    strncpy(ptr, oprd_l,(length2-cpt +2)  ) ;
+    printf("The length of string before transformation is  : %d\n", length);    
+    printf("The length of string after transformation is  : %d\n",  (int)strlen(ptr) -1);
+    printf("Final solution ptr %s\n", ptr);
 
     return 0 ;
-
-
-    
-
 }
 
-int number_char(char *oprd_l)
-{
-	char a[]= " " ;
-	char *token=strtok(oprd_l , a) ;
-	int  cpt= 0 ;
-    while(token!=NULL)
-    {
-        cpt+=strlen(token);
-        token=strtok(NULL, a) ;
-    }
-    return cpt ;
-
-
-} 
