@@ -24,7 +24,7 @@ char *memcopy(char *str1, const char *str2, size_t n  )
   for(int i = 0 ; i<size; i++)
   {
   	*(str1 +i) = *(str2 +i);
-}
+  }
  return str1 ;
   
 }
