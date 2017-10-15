@@ -8,8 +8,6 @@ int cmpfunc (const void * a, const void * b)
 }
 
 int main(int argc, char *argv[] )
-
-
 {
     int numb  ;
     printf("Please,  how many numbers you will enter ? ") ;
