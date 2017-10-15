@@ -21,20 +21,13 @@ int main(int argc, char *argv[] )
 	pointer_start= &buffer[10];
 	pointer_end  = &buffer[10];
 	char  value ;
-	char array[]="abcdeghikkki";
+	char array[]="abcdeghikkki";//for testing write function
 	int size     =strlen(array) ;
         for(int i=0 ; i<size  ;i++)
 	{
-	
-	    write(array[i])  ;
-
-	}
-	
-	printf("The   content of the buffer is %s\n", buffer)  ;
-	
-
-
-	
+	   write(array[i])  ;
+        }
+        printf("The   content of the buffer is %s\n", buffer)  ;
 }
 
 void   write(char value )
@@ -49,40 +42,28 @@ void   write(char value )
 			*pointer_end=value ;
 			pointer_end++ ;
 			count_fill++ ;
-			
-			
-			
-		}
+                }
 		else
 			if(pointer_end==&buffer[BUFFER_SIZE])
-			{   
-
-				*pointer_end=value ;
+			{       
+                               *pointer_end=value ;
 				pointer_end=&buffer[0];
 				count_fill++ ;
-				
-			}
+                        }
 			else
 			{
-				*pointer_end=value ;
+			       *pointer_end=value ;
 				pointer_end++ ;
 				count_fill++ ;
-			}
-
-    
-    }
-		
-	else
+                       }
+         }
+         else
 		{   
 			if(pointer_start==pointer_end)
 			{
 				*pointer_start=  value ;
 				pointer_start ++ ;
-				
-
-
-
-			}
+	                }
 			else
 			{
 				if(pointer_start<&buffer[BUFFER_SIZE])
@@ -90,8 +71,6 @@ void   write(char value )
 					*pointer_start = value ;
 					pointer_end  = pointer_start;
 					pointer_start ++ ;
-					
-					
 				}
 				else
 					if(pointer_start==&buffer[BUFFER_SIZE])
@@ -100,7 +79,6 @@ void   write(char value )
 						pointer_start = &buffer[0] ;
 						pointer_end  = pointer_start;
 						pointer_start ++ ;
-						
 					}
 				}
 
