@@ -4,8 +4,10 @@
 #include <stdbool.h>
 #include <math.h>
 #include <ctype.h>
-#define BUFFER_SIZE   11  
-char   buffer[BUFFER_SIZE]={' ', ' ', ' ',  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '} ;
+#define BUFFER_SIZE   11 
+//char   buffer[BUFFER_SIZE]={'F'
+//@Ewoud : I try buffer[BUFFER_SIZE]={'F'}, but I do  not get the same result.  
+char   buffer[BUFFER_SIZE]={'F','F','F','F','F','F','F','F','F','F','F'} ;
 void   write(char a) ;
 char   read(int position) ;
 char   *pointer_start ;
@@ -17,7 +19,7 @@ int main(int argc, char *argv[] )
 	pointer_start= &buffer[10];
 	pointer_end  = &buffer[10];
 	char  value ;
-	char array[]="abcdeghikkki";//for testing write function
+	char array[]="abcdeghi";//for testing write function
 	int size     =strlen(array) ;
 	for(int i=0 ; i<size  ;i++)
 	{
