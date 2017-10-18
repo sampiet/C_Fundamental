@@ -6,9 +6,7 @@
 #include <ctype.h>
 int  string_length(const char *str1 ) ;
 bool string_equal(const char *str1,const char *str2, int size ) ;
-
 int main(int argc, char *argv[] )
-
 {
   char *oprd_l1 =argv[1];
   char *oprd_l2 =argv[2] ;
@@ -28,10 +26,7 @@ int main(int argc, char *argv[] )
       printf("Strings are not equal") ;
     }
   }
-
-   
 }
-
 bool string_equal(const char *str1,const char *str2, int size) 
 {
   bool val = true  ; 
@@ -40,8 +35,9 @@ bool string_equal(const char *str1,const char *str2, int size)
     if(*(str1+i)!=*(str2+i))
     {
       val= false ;
+      return val ;
+      break ;
     }
-
   }
   return val ;
 }
