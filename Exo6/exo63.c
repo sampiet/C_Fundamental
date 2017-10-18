@@ -7,7 +7,6 @@
 void memcopy(char *ptr_dest, const char *ptr_source, size_t n) ;
 int main(int argc, char *argv[] )
 { 
-  
   char ptr_source[]="abcd" ;
   int size= strlen(ptr_source) ;
   printf("Size of the array %d\n", size);
