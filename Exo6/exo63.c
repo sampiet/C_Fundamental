@@ -4,29 +4,25 @@
 #include <stdbool.h>
 #include <math.h>
 #include <ctype.h>
-
-char *memcopy(char *str1, const char *str2, size_t n  ) ;
-
+void memcopy(char *ptr_dest, const char *ptr_source, size_t n) ;
 int main(int argc, char *argv[] )
 { 
-
- char *str1 ;
- char str2[4]="abcd" ;
- memcopy(str1, str2, 4 );
- printf("String str1 %s\n", str1);
+  
+  char ptr_source[]="abcd" ;
+  int size= strlen(ptr_source) ;
+  printf("Size of the array %d\n", size);
+  char *ptr_dest=(char*)malloc(size*sizeof(char));
+  memcopy(ptr_dest, ptr_source,4);
+  printf("Destination %s\n", ptr_dest);
+  free(ptr_dest) ;
 }
-
-
-char *memcopy(char *str1, const char *str2, size_t n  ) 
+void memcopy(char *ptr_dest, const char *ptr_source,size_t n) 
 {
   int size = (int) n  ;
-  str1= (char *)malloc(n*sizeof(char)) ;
   for(int i = 0 ; i<size; i++)
   {
-  	*(str1 +i) = *(str2 +i);
+  	*(ptr_dest +i) = *(ptr_source+i);
   }
- return str1 ;
-  
 }
 
 
