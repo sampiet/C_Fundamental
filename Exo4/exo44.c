@@ -23,7 +23,6 @@ int main(void)
             printf("Please enter a new number \n");
             scanf("%d", &guess);
             numb_guess ++ ;
-        
         }
         else 
         {
@@ -37,8 +36,6 @@ int main(void)
         }
     }
     printf("The amount of number guess is %d\n", numb_guess);
-
-    
     if(guess==rand_numb)
     {
     	printf("you guessed the good number\n");
