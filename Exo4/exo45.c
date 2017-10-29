@@ -31,7 +31,7 @@ int main (int argc, char **argv)
         }
     }
     return (0) ;
-    }
+}
 int size_mem(int numb)
 {
     int size=0;
@@ -49,7 +49,6 @@ int size_mem(int numb)
         {
             cpt++;
         }
-       
     }
     return  size ;
 }
