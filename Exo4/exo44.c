@@ -42,9 +42,9 @@ int main(void)
     }
     else
     {
+
     	 printf("this is not the good number\n") ;
     	 printf("the random number is %d\n", rand_numb) ;
     }
     return 0;
-
 }
