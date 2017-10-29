@@ -1,5 +1,4 @@
 
-
 #include <stdio.h>
 #include <stdlib.h>
 int main()
@@ -11,6 +10,4 @@ int main()
     printf("PATH :%s\n", s2 );
     const char* s3 = getenv("HOME");
     printf("HOME :%s\n", s3);
-
-
 }
