@@ -3,8 +3,8 @@
 #include <stdlib.h>
 int main (int argc, char *argv)
 {
-    int buff[size] ;
     const int  size = 10 ;
+    int buff[size] ;
     time_t t  ;
     int position[size];
     for(int i=0 ; i<size; i++)
