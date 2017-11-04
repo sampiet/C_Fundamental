@@ -5,8 +5,6 @@
 #include <math.h>
 #include <ctype.h>
 #define BUFFER_SIZE   11 
-//char   buffer[BUFFER_SIZE]={'F'
-//@Ewoud : I try buffer[BUFFER_SIZE]={'F'}, but I do  not get the same result.  
 char   buffer[BUFFER_SIZE]={'F','F','F','F','F','F','F','F','F','F','F'} ;
 void   write(char a) ;
 char   read(int position) ;
