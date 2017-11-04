@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-int string_len(char *string);
 bool string_equal(char *strg1, char *strg2, int length);
+int string_len(char *string);
 int main (int argc, char *argv[])
 {
     char *str1=argv[1];
