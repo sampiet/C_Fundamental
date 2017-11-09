@@ -27,7 +27,7 @@ int main (int argc, char *argv[])
         {
             printf(" ");
             printf("%d", matrix_transp[i][j]);
-        }
+        }   
         printf("\n");
     }
     printf("\n");
@@ -42,9 +42,4 @@ int main (int argc, char *argv[])
         }
         printf("\n");
     }
-
-
-    
-
-
 }
